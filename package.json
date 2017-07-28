@@ -1,0 +1,20 @@
+{
+  "name": "todo-web-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Chris Arnold",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.29"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
