@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
+const config = require('./config');
+
+// remove this and replace with the path to your Mongodb database
+const DATABASE_URL = config.DATABASE_URL;
 
 const _ = require('lodash');
 
@@ -16,7 +20,7 @@ let db = undefined;
 // tasks collection
 const TASKS_COLLECTION = 'tasks';
 
-MongoClient.connect(db_uri, (err, database) => {
+MongoClient.connect(DATABASE_URL, (err, database) => {
     if (err) {
         return console.log(err);
     }
