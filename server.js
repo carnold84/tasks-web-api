@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
-const db_uri = 'mongodb://localhost:27017/todo-web';
 
 const _ = require('lodash');
 
