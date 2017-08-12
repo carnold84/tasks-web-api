@@ -1,11 +1,12 @@
 {
   "name": "todo-web-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "author": "Chris Arnold",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -16,5 +17,8 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "6.10.2"
   }
 }
