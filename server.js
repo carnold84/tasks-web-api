@@ -30,8 +30,8 @@ MongoClient.connect(DATABASE_URL, (err, database) => {
         return console.log(err);
     }
     db = database;
-    app.listen(3002, () => {
-        console.log('Listening on 3002');
+    app.listen(process.env.PORT || 3002, () => {
+        console.log('Listening on ' + (process.env.PORT || 3002));
     });
 });
 
