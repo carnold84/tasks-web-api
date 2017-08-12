@@ -7,7 +7,7 @@ const ObjectID = require('mongodb').ObjectID;
 const config = require('./config');
 
 // remove this and replace with the path to your Mongodb database
-const DATABASE_URL = config.DATABASE_URL;
+const DATABASE_URL = process.env.MONGODB_URI;
 
 const _ = require('lodash');
 
