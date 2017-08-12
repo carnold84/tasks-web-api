@@ -4,7 +4,12 @@ const bodyParser = require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
-const config = require('./config');
+const env = process.env.NODE_ENV || 'development';
+
+if (env === 'development') {
+    const config = require('./config')[env];
+    process.env.MONGODB_URI = config.DATABASE_URL;
+}
 
 // remove this and replace with the path to your Mongodb database
 const DATABASE_URL = process.env.MONGODB_URI;
